@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
 ol,ul {
-	list-style:none
+  list-style:none
 }
 
 body {
@@ -28,50 +28,50 @@ p,span {
 }
 
 header {
-	width: 310px;
-	position: fixed;
+  width: 310px;
+  position: fixed;
 
-	img {
-		width: 200px;
-		margin-bottom: 20px;
-		margin: 0px auto;
-		display: block;
-	}
+  img {
+    width: 200px;
+    margin-bottom: 20px;
+    margin: 0px auto;
+    display: block;
+  }
 
-	nav ul li {
-		margin-bottom:10px;
-	}
+  nav ul li {
+    margin-bottom:10px;
+  }
 
-	h1 {
-		text-align: center;
-	}
+  h1 {
+    text-align: center;
+  }
 }
 
 section {
-	width: 60%;
-	margin-left: 450px;
-	font-size: 16px;
+  width: 60%;
+  margin-left: 450px;
+  font-size: 16px;
 }
 
 strong {
-	font-weight: bold;
+  font-weight: bold;
 
-	a {
-		border: none;
-	}
+  a {
+    border: none;
+  }
 }
 
 section {
-	p {
-		margin-bottom:30px;
+  p {
+    margin-bottom:30px;
 
-		strong {
-			font-weight:600;
-		}
-	}
+    strong {
+      font-weight:600;
+    }
+  }
 
-	h3 {
-		font-size: 1.3em;
-		margin: 0 0 20px;
-	}
+  h3 {
+    font-size: 1.3em;
+    margin: 0 0 20px;
+  }
 }
