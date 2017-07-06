@@ -1,54 +1,119 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
-ol, ul {
-  list-style: none; }
+
+html {
+  height: 100%;
+  box-sizing: border-box; /* https://css-tricks.com/box-sizing/ */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* https://css-tricks.com/box-sizing/ */
+  -webkit-padding-start: 0px;
+}
+
 
 body {
   background: white;
   color: #333434;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  margin: 50px 100px 0; }
+  margin: 0;
+  min-height: 100%;
+  display: flex; /* body is the outer flex container */
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+ol, ul {
+  list-style: none;
+}
 
 a {
   color: #E22442;
   text-decoration: none;
   font-size: 1em;
-  transition: all 1s; }
-  a:hover {
-    color: #333434; }
+  transition: all 1s;
+}
+
+a:hover {
+  color: #333434;
+}
 
 p, span {
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
-header {
-  width: 310px;
-  position: fixed; }
-  header img {
-    width: 200px;
-    margin-bottom: 20px;
-    margin: 0px auto;
-    display: block; }
-  header nav ul li {
-    margin-bottom: 10px; }
-  header h1 {
-    text-align: center; }
+.inner-flex-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 650px);
+  order: 1;
+}
+
+aside   {
+  flex: 1;
+  order: 0;
+  padding-top: 50px;
+}
+
+aside img {
+  width: 200px;
+}
+
+aside nav ul li {
+  margin-bottom: 10px;
+}
+
+aside h1 {
+  text-align: center;
+}
+
+header  {
+  flex: 1;
+  order: 0;
+  text-align: left;
+  padding-top: 50px;
+  font-size: 16px;
+}
 
 section {
-  width: 60%;
-  margin-left: 450px;
-  font-size: 16px; }
+  flex: 4;
+  order: 1;
+  text-align: left;
+  font-size: 16px;
+}
 
 strong {
-  font-weight: bold; }
-  strong a {
-    border: none; }
+  font-weight: bold;
+}
 
-section p {
-  margin-bottom: 30px; }
-  section p strong {
-    font-weight: 600; }
-section h3 {
-  font-size: 1.3em;
-  margin: 0 0 20px; }
+strong a {
+  border: none;
+}
 
-/*# sourceMappingURL=main.css.map */
+@media screen and ( max-width: 1024px) {
+  .inner-flex-container {
+    width: calc(100% - 550px);
+  }
+}
+
+@media screen and ( max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  section {
+    flex: 1;
+    order: 2;
+    text-align: center;
+  }
+  .inner-flex-container {
+    width: 100%;
+    flex: 1;
+  }
+
+  header {
+    text-align: center;
+  }
+}
+
+
