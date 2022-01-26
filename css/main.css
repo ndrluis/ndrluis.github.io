@@ -52,7 +52,7 @@ p, span {
 aside   {
   flex: 1;
   order: 0;
-  padding-top: 50px;
+  padding-top: 32px;
 }
 
 aside img {
@@ -60,7 +60,7 @@ aside img {
 }
 
 aside nav ul li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 aside h1 {
@@ -68,10 +68,10 @@ aside h1 {
 }
 
 header  {
-  flex: 1;
+  flex: 0;
   order: 0;
   text-align: left;
-  padding-top: 50px;
+  padding-top: 32px;
   font-size: 16px;
 }
 
@@ -96,9 +96,13 @@ strong a {
   }
 }
 
-@media screen and ( max-width: 768px) {
+@media screen and ( max-width: 820px) {
   body {
     flex-direction: column;
+  }
+
+  aside {
+    flex: 0
   }
 
   section {
@@ -113,6 +117,7 @@ strong a {
 
   header {
     text-align: center;
+    padding-top: 16px;
   }
 }
 
